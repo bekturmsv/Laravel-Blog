@@ -1,0 +1,53 @@
+label {
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+    color: #020202;
+    margin-bottom: 11px;
+}
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-control {
+    border: 2px solid #fff0e8;
+    padding: 16px 13px;
+    color: #7d848b;
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+    line-height: 1;
+    border-radius: 0;
+
+    &:not(textarea) {
+        height: 45px;
+    }
+}
+
+.edica-contact {
+    .contact-form-wrapper {
+        .btn {
+            padding: 18px 45px;
+            color: $white;
+            font-size: 18px;
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    .contact-sidebar {
+        h5 {
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.63;
+            color: #7d848b;
+            margin-bottom: 19px;
+        }
+
+        .contact-map {
+            margin-top: 53px;
+        }
+    }
+}

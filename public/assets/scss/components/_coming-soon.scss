@@ -1,0 +1,57 @@
+.edica-coming-soon {
+
+    .comimg-soon-subtitle {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        line-height: 1.5;
+        color: #020202;
+        margin-bottom: 20px;
+    }
+
+    .coming-soon-title {
+        font-size: 60px;
+        font-weight: $font-weight-bold;
+        line-height: 0.98;
+        color: $black;
+        margin-bottom: 43px;
+    }
+
+    .counter {
+        font-size: 40px;
+        font-weight: $font-weight-bold;
+        line-height: 0.75;
+        color: #f29431;
+        margin-bottom: 58px;
+    }
+
+    .subscription-title {
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+        line-height: 1;
+        color: #020202;
+        margin-bottom: 11px;
+    }
+
+    .subscription-form {
+        .form-group {
+            .form-control {
+                border-radius: 0;
+                border: 1px solid #fff0e8;
+                padding: 16px 13px;
+                height: 45px;
+                font-size: 14px;
+                line-height: 1;
+                color: #7d848b;
+            }
+        }
+
+        .btn {
+            border-radius: 0;
+            color: $white;
+            padding: 15px 21px;
+            line-height: 1;
+            font-size: 14px;
+            font-weight: $font-weight-bold;
+        }
+    }
+}

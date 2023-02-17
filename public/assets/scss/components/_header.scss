@@ -1,0 +1,66 @@
+.edica-header {
+    &.edica-landing-header {
+        background-image: linear-gradient(90deg, #ffffff 0%, #ffffff 55%, #fff0e8 55%, #fff0e8 100%);
+
+        .carousel-indicators {
+            top: 0;
+            left: auto;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                height: auto;
+                border: 0;
+                text-indent: 0;
+                background-color: transparent;
+                font-size: 21px;
+                font-weight: $font-weight-bold;
+                color: $black;
+                line-height: 2.14;
+            }
+        }
+
+        .carousel-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                margin-bottom: 22px;
+            }
+
+            p {
+                margin-bottom: 22px;
+            }
+
+            .carousel-content-btns {
+                .btn {
+                    padding: 18px 34px;
+                    font-size: 18px;
+                    font-weight: $font-weight-bold;
+                    color: $white;
+                    margin-right: 24px;
+                    margin-bottom: 24px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .carousel-img-wrapper {
+            display: flex;
+            padding-top: 95px;
+            justify-content: center;
+            align-items: flex-end;
+        }
+    }
+    
+    .nav-link {
+        font-size: 16px;
+        line-height: 1;
+        font-weight: $font-weight-bold;
+    }
+}

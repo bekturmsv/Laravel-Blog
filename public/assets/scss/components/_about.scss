@@ -1,0 +1,123 @@
+.edica-about-intro {
+    .intro-title {
+        color: theme-color(success);
+        font-size: 45px;
+        font-weight: $font-weight-bold;
+        line-height: 1.31;
+        
+        span {
+            background-color: rgba(#4ca28d, 0.11);
+        }
+    }
+
+    .intro-content {
+        font-size: 22px;
+        font-weight: $font-weight-medium;
+        line-height: 1.45;
+        color: #3a3a3a;
+
+        .first-letter {
+            font-size: 55px;
+            font-weight: bold;
+            line-height: 0.85;
+            color: #000000;
+            float: left;
+            padding: 8px 15px;
+        }
+    }
+}
+
+.edica-about-vision {
+    .vision-title {
+        font-size: 45px;
+        font-weight: $font-weight-bold;
+        line-height: 1.04;
+        margin-bottom: 20px;
+    }
+
+    .vision-text {
+        font-size: 18px;
+        line-height: 1.56;
+        color: #3a3a3a;
+    }
+}
+
+.edica-about-counter {
+    .counter-card {
+        .counter-count {
+            font-size: 40px;
+            font-weight: $font-weight-bold;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .count-label {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1;
+        }
+    }
+}
+
+.edica-about-goal {
+    .goal-title {
+        font-size: 45px;
+        font-weight: $font-weight-bold;
+        line-height: 1.04;
+        margin-bottom: 20px;
+    }
+
+    .goal-text {
+        font-size: 18px;
+        line-height: 1.56;
+        color: #3a3a3a;
+    }
+}
+
+.edica-about-clients {
+    .clients-title {
+        font-size: 45px;
+        font-weight: $font-weight-bold;
+        line-height: 1.04;
+        margin-bottom: 30px;
+    }
+}
+
+.edica-about-faq {
+    .faq-title {
+        font-size: 45px;
+        font-weight: $font-weight-bold;
+        line-height: 1.04;
+        margin-bottom: 22px;
+    }
+
+    .faq-section-text {
+        font-size: 18px;
+        line-height: 1.56;
+        color: #3a3a3a;
+        margin-bottom: 42px;
+    }
+
+    .accordion {
+        border: 0;
+
+        .card {
+            border: 0;
+            border-bottom: 1px solid #e6ecf2;
+            border-radius: 0;
+
+            .card-header {
+                background-color: transparent;
+                padding-top: 25px;
+                padding-bottom: 25px;
+
+                a {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 1.25;
+                    color: #000000;
+                    display: block;
+                }
+            }
+        }
+    }
+}

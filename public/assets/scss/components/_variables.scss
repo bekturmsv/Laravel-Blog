@@ -1,0 +1,42 @@
+// Color system
+$black: #000000;
+$white: #ffffff;
+
+$theme-colors: (
+    "secondary": #d0c2af,
+    "success": #2e937a,
+    "warning":    #f29431
+);
+
+$enable-caret: false;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:               $white;
+$body-color:            #000000;
+
+// Typography
+
+$font-family-base:      'DM Sans', sans-serif;
+
+$font-weight-light:     300;
+$font-weight-regular:   400;
+$font-weight-medium:    500;
+$font-weight-bold:      700;
+
+$font-weight-base:      $font-weight-regular;
+
+$headings-font-weight:  $font-weight-bold;
+
+// Navbar 
+$navbar-padding-y:                  1.25rem;
+$navbar-padding-x:                  2.125rem;
+$navbar-brand-height:               2.687rem;
+$navbar-brand-padding-y:            7px;
+$navbar-nav-link-padding-x:         1.562rem;
+$navbar-light-color:                $black;
+$navbar-light-hover-color:          $black;
+$navbar-light-active-color:         $black;
+

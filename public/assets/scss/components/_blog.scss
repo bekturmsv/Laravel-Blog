@@ -1,0 +1,283 @@
+.blog {
+    .blog-post {
+        margin-bottom: 119px;
+
+        .blog-post-thumbnail-wrapper {
+            height: 265px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 26px;
+
+            img {
+                max-width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease-in-out;
+            }
+        }
+
+        .blog-post-category {
+            color: #7d848b;
+            font-size: 16px;
+            line-height: 1.13;
+            margin-bottom: 8px;
+        }
+
+        .blog-post-permalink {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .blog-post-title {
+            font-size: 20px;
+            font-weight: $font-weight-bold;
+            line-height: 1.5;
+            color: #020202;
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            .blog-post-thumbnail-wrapper {
+                img {
+                    transform: scale(1.075);
+                }
+            }
+        }
+
+        &.fetured-post {
+            .blog-post-thumbnail-wrapper {
+                height: 296px;
+            }
+        }
+    }
+}
+
+.widget {
+    margin-bottom: 66px;
+
+    .widget-title {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        line-height: 1.5;
+        color: #020202;
+        margin-bottom: 25px;
+    }
+}
+
+.widget-post-carousel {
+    .post-carousel {
+
+        .carousel-indicators {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 30px;
+            left: auto;
+            right: 0;
+            top: auto;
+            bottom: 100%;
+            
+            li {
+                width: 10px;
+                height: 10px;
+                margin: 5px;
+                border: 0;
+                background-color: #2e937a;
+                border-radius: 50%;
+            }
+        }
+
+        .carousel-item {
+            img {
+                width: 100%;
+                height: 167px;
+                object-fit: cover;
+                margin-bottom: 18px;
+            }
+
+            .post-title {
+                a {
+                    font-size: 20px;
+                    font-weight: $font-weight-medium;
+                    line-height: 1.5;
+                    color: #020202;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.widget-post-list {
+    .post-list {
+        padding-left: 0;
+        list-style: none;
+
+        .post-permalink {
+            color: #020202;
+            padding: 13px 0;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                text-decoration: none;
+                background-color: #f4f4f4;
+            }
+
+            img {
+                width: 70px;
+                margin-right: 16px;
+            }
+
+            .media-body {
+                align-self: center;
+
+                .post-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.blog-post {
+
+    .edica-page-title {
+        padding-bottom: 33px;
+    }
+
+    .edica-blog-post-meta {
+        text-align: center;
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+        line-height: 1;
+        color: #7d848b;
+        margin-bottom: 67px;
+    }
+
+    .blog-post-featured-img {
+        margin-bottom: 44px;
+    }
+
+    .post-content {
+        p {
+            font-size: 18px;
+            line-height: 1.56;
+            color: #3a3a3a;
+            margin-bottom: 50px;
+        }
+
+        a {
+            color: theme-color(warning);
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 67px;
+            
+            li {
+                font-size: 16px;
+                line-height: 1.63;
+                color: #3a3a3a;
+                margin-bottom: 11px;
+                position: relative;
+                padding-left: 23px;
+
+                &::before {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: $black;
+                    position: absolute;
+                    top: 8px;
+                    left: 0;
+                }
+            }
+        }
+
+        blockquote {
+            margin-bottom: 70px;
+            padding-left: 94px;
+            background-image: url('../images/quote.svg');
+            background-position: left top;
+            background-repeat: no-repeat;
+            background-size: 60px;
+            p {
+                font-size: 22px;
+                font-weight: $font-weight-bold;
+                line-height: 1.45;
+                color: #0c0b0b;
+                margin-bottom: 24px;
+            }
+
+            .blockquote-footer {
+                font-size: 20px;
+                font-weight: $font-weight-bold;
+                color: #bbc5d2;
+            }
+        }
+    }
+
+    .related-posts {
+        padding-top: 45px;
+        border-top: 1px solid #fff0e8;
+        margin-bottom: 52px;
+
+        .section-title {
+            font-size: 30px;
+            line-height: 1.97;
+        }
+
+        .post-thumbnail {
+            width: 100%;
+            margin-bottom: 21px;
+        }
+
+        .post-category {
+            font-size: 16px;
+            line-height: 1.13;
+            color: #7d848b;
+            margin-bottom: 8px;
+        }
+
+        .post-title {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.5;
+            color: #020202;          
+        }
+    }
+
+    .comment-section {
+        margin-bottom: 100px;
+        
+        .form-group {
+            margin-bottom: 33px;
+        }
+
+        .form-control {
+            min-height: 60px;
+            padding: 21px 19px;
+        }
+
+        .btn {
+            padding: 19px 45px;
+            color: $white;
+            font-size: 18px;
+            font-weight: $font-weight-bold;
+        }
+    }
+}
