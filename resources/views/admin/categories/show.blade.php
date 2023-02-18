@@ -9,6 +9,13 @@
           <div class="col-sm-6 d-flex  align-items-center ">
             <h1 class="mr-3">{{$category->title}}</h1>
               <a href="{{route('admin.category.edit', $category->id)}}" class="text-success"><i class="fas fa-pencil-alt"></i></a>
+              <form action="{{route('admin.category.delete', $category->id)}}" method="POST">
+                  @csrf
+                  @method("DELETE")
+                  <button type="submit" class="border-0 bg-transparent">
+                      <i class="fas fa-trash text-danger" role="button"></i>
+                  </button>
+              </form>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -37,12 +44,10 @@
                           <tr>
                               <td>ID</td>
                               <td>{{$category -> id}}</td>
-                              <td><a href=""><i class="far fa-eye"></i></a></td>
                           </tr>
                           <tr>
                               <td>Название</td>
                               <td>{{$category -> title}}</td>
-                              <td><a href=""><i class="far fa-eye"></i></a></td>
                           </tr>
                           </tbody>
                       </table>
