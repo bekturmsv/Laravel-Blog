@@ -20,9 +20,10 @@ Route::group(["namespace" => "App\Http\Controllers\Admin", "prefix" => "admin"],
     Route::group(["namespace"=> "Main"], function(){
         Route::get("/","IndexController");
     });
-    
+
     Route::group(["namespace"=> "Category", "prefix"=>"categories"], function(){
-        Route::get("/","IndexController");
+        Route::get("/","IndexController")->name("admin.category.index");
+        Route::get("/create","CreateController")->name("admin.category.create");
     });
 });
 
