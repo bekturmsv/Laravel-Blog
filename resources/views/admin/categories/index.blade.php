@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">Категория</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <li class="breadcrumb-item active">Категория</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -26,10 +26,35 @@
         <!-- Small boxes (Stat box) -->
         <div class="row">
         <div class="col-1">
-          <a href="{{route('admin.category.create')}}" class="btn btn-lock btn-primary">Добавить</a>
+          <a href="{{route('admin.category.create')}}" class="btn btn-lock btn-primary mb-3">Добавить</a>
           </div>
-          <div class="col-12">
-          Категория
+        </div>
+          <div class="row">
+          <div class="col-8">
+
+              <div class="card">
+                  <div class="card-body table-responsive p-0">
+                      <table class="table table-hover text-nowrap">
+                          <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Название</th>
+
+                          </tr>
+                          </thead>
+                          <tbody>
+                          @foreach($categories as $category)
+                          <tr>
+                              <td>{{$category-> id}}}</td>
+                              <td>{{$category -> title}}}</td>
+
+                          </tr>
+                          @endforeach
+                          </tbody>
+                      </table>
+                  </div>
+                  <!-- /.card-body -->
+              </div>
           </div>
         </div>
         <!-- /.row -->
@@ -40,7 +65,7 @@
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Blog on Laravel.</strong>
-   
+
   </footer>
 
   <!-- Control Sidebar -->
