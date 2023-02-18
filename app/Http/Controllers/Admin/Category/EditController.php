@@ -9,6 +9,6 @@ class EditController extends Controller
 {
      function __invoke(Category $category)
     {
-        return view("admin.categories.edit", compact("category"));
+        return view("admin.category.edit", compact("category"));
     }
 }

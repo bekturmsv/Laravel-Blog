@@ -33,7 +33,7 @@ pre {
   @include font-size($code-font-size);
   color: $pre-color;
 
-  // Account for some code outputs that place code tags in pre tags
+  // Account for some code outputs that place code tag in pre tag
   code {
     @include font-size(inherit);
     color: inherit;

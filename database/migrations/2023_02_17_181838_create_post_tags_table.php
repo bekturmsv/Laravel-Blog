@@ -24,7 +24,7 @@ return new class extends Migration
 
             // FK
             $table->foreign("post_id","post_tag_post_fk")->on("posts")->references("id");
-            $table->foreign("tag_id","post_tag_tag_fk")->on("tags")->references("id");
+            $table->foreign("tag_id","post_tag_tag_fk")->on("tag")->references("id");
         });
     }
 

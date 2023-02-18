@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Admin\Tag;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
+use App\Models\Tag;
 
 class EditController extends Controller
 {
-     function __invoke(Category $category)
+     function __invoke(Tag $tag)
     {
-        return view("admin.categories.edit", compact("category"));
+        return view("admin.tag.edit", compact("tag"));
     }
 }

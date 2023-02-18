@@ -8,6 +8,6 @@ class CreateController extends Controller
 {
      function __invoke()
     {
-        return view("admin.categories.create");
+        return view("admin.category.create");
     }
 }

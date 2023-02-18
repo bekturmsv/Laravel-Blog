@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Admin\Tag;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
+use App\Models\Tag;
 
 class IndexController extends Controller
 {
      function __invoke()
     {
-        $categories = Category::all();
-        return view("admin.categories.index", compact("categories"));
+        $tags = Tag::all();
+        return view("admin.tag.index", compact("tags"));
     }
 }

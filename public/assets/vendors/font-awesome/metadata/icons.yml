@@ -18347,7 +18347,7 @@ tags:
     - '1'
     - 5.0.0
     - 5.10.2
-  label: tags
+  label: tag
   search:
     terms:
       - discount
