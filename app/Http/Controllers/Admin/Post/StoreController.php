@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 class StoreController extends Controller
 {
      function __invoke(StoreRequest $request)
-    {        dd($request);
+    {
 
         $data = $request -> validated();
 

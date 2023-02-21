@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href=" {{asset('plugins/fontawesome-free/css/all.min.css')}} ">
+    <link rel="stylesheet" href="{{asset("plugins/select2/css/select2.min.css")}}">
   <!-- Ionicons -->
   <link rel="stylesheet" href=" https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- overlayScrollbars -->
@@ -46,6 +47,7 @@
 <!-- jQuery UI 1.11.4 -->
 <script src=" {{asset('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
 <script src=" {{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src=" {{asset('plugins/select2/js/select2.full.min.js')}}"></script>
 <script src=" {{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
@@ -75,7 +77,8 @@
         })
         $(function () {
             bsCustomFileInput.init();
-        })
+        });
+        $(".select2").select2()
     </script>
     <style>
         .custom-file-input:lang(en)~.custom-file-label::after{

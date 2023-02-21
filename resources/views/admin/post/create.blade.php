@@ -55,6 +55,9 @@
                             <span class="input-group-text">Загрузка</span>
                         </div>
                     </div>
+                    @error("preview_image")
+                    <div class="text-danger">Это поле необходимо для заполнения </div>
+                    @enderror
                 </div>
 
                 <div class="form-group w-50">
@@ -68,17 +71,37 @@
                             <span class="input-group-text">Загрузка</span>
                         </div>
                     </div>
+                    @error("main_image")
+                    <div class="text-danger">Это поле необходимо для заполнения </div>
+                    @enderror
                 </div>
                 <div class="form-group w-50">
                     <label for="">Выберите категорию</label>
                     <select name="category_id" class="form-control" id="">
+                        <option value="" type="selected" >Выберите категорию</option>
                         @foreach($categories as $category)
-                            <option value="{{$category->id}}">{{$category -> title}}</option>
+                            <option value="{{$category->id}}"
+                            {{$category->id == old("$category->id") ? "selected" : ""}}
+                            >{{$category -> title}}</option>
                         @endforeach
                     </select>
                 </div>
+                <div class="form-group col-6" >
+                    <label>Тэги<label>
+                    <select class="select2 select2-hidden-accessible" multiple="" data-placeholder="Выберите тэги" style="width: 100%;" data-select2-id="7" tabindex="-1" aria-hidden="true">
+                        <option >Alabama</option>
+                        <option >Alaska</option>
+                        <option >California</option>
+                        <option >Delaware</option>
+                        <option >Tennessee</option>
+                        <option >Texas</option>
+                        <option >Washington</option>
+                    </select>
+
+                </div>
+
                 <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Добавить11">
+                    <input type="submit" class="btn btn-primary" value="Добавить">
                 </div>
             </form>
           </div>
