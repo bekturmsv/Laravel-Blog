@@ -19,7 +19,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{route("admin.main.index")}}">Home</a></li>
               <li class="breadcrumb-item active">Категория</li>
             </ol>
           </div><!-- /.col -->
@@ -37,27 +37,53 @@
           <div class="col-8">
 
               <div class="card">
-                  <div class="card-body table-responsive p-0">
-                      <table class="table table-hover text-nowrap">
-
-                          <tbody>
-                          <tr>
-                              <td>ID</td>
-                              <td>{{$post -> id}}</td>
-                          </tr>
-                          <tr>
-                              <td>Название</td>
-                              <td>{{$post -> title}}</td>
-                          </tr>
-                          </tbody>
-                      </table>
+                  <div class="pl-3 pt-2 text-blue">
+                      <a href="{{route("admin.post.index")}}">Назад</a>
                   </div>
-                  <!-- /.card-body -->
-              </div>
+                  <div class="form-group w-50 p-3">
+                      <h3>Название поста</h3>
+                      <input type="text" class="form-control border-0" disabled name="title" placeholder="Название поста" value="{{$post->title}}">
+
+                  </div>
+                  <div class="form-group w-50 p-3">
+                      <h3>Контент</h3>
+                      <input type="text" class="form-control border-0" disabled value="{{$post->content}}">
+                  </div>
+                  <div class="form-group w-100 p-3">
+                      <h3 for="exampleInputFile">Превью</h3>
+                      <div class="w-100 mb-3">
+                          <img src="{{url("storage/".$post->preview_image) }}" alt="preview_image" class="w-50">
+                      </div>
+                  </div>
+
+                  <div class="form-group w-100 p-3">
+                      <h3 for="exampleInputFile">Главное изображение</h3>
+                      <div class="w-100 mb-3">
+                          <img src="{{url("storage/".$post->main_image)}}" alt="main_image" class="w-50">
+                      </div>
+
+                  </div>
+                  <div class="form-group w-60 d-block p-3">
+                      <h3 for="">Категория</h3> <br>
+                      @foreach($categories as $category)
+                          @if($category->id == $post -> category_id )
+                      <input type="text" value="{{$category->title}}" disabled >
+                          @endif
+                      @endforeach
+                  </div>
+                  <div class="form-group col-6 p-3" >
+                      <h3>Тэги</h3>
+                              <select class="select2 select2-hidden-accessible" disabled name="tag_ids[]" multiple="" data-placeholder="Тэги отсутствуют" style="width: 100%;" data-select2-id="7" tabindex="-1" aria-hidden="true">
+                                  @foreach($tags as $tag)
+                                      <option {{ is_array($post->tags->pluck("id")->toArray() ) && in_array($tag->id, $post->tags->pluck("id")->toArray()) ? "selected" : ""}} disabled value="{{$tag->id}}">{{$tag->title}}</option>
+                                  @endforeach
+                              </select>
+                  </div>
           </div>
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->
+      </div>
     </section>
     <!-- /.content -->
   </div>

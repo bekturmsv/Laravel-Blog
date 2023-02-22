@@ -33,7 +33,7 @@
             <div class="form-group w-25">
                     <input type="text" class="form-control" name="title" placeholder="Название поста" value="{{old("title")}}">
                     @error("title")
-                        <div class="text-danger">Это поле необходимо для заполнения </div>
+                        <div class="text-danger">{{$message}} </div>
                     @enderror
                   </div>
                 <div class="form-group">
@@ -41,7 +41,7 @@
                        {{old("content")}}
                     </textarea>
                     @error("content")
-                    <div class="text-danger">Это поле необходимо для заполнения </div>
+                    <div class="text-danger">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="form-group w-50">
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     @error("preview_image")
-                    <div class="text-danger">Это поле необходимо для заполнения </div>
+                    <div class="text-danger">{{$message}}</div>
                     @enderror
                 </div>
 
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     @error("main_image")
-                    <div class="text-danger">Это поле необходимо для заполнения </div>
+                    <div class="text-danger">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="form-group w-50">
@@ -85,18 +85,20 @@
                             >{{$category -> title}}</option>
                         @endforeach
                     </select>
+                    @error("category_id")
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="form-group col-6" >
                     <label>Тэги<label>
-                    <select class="select2 select2-hidden-accessible" multiple="" data-placeholder="Выберите тэги" style="width: 100%;" data-select2-id="7" tabindex="-1" aria-hidden="true">
-                        <option >Alabama</option>
-                        <option >Alaska</option>
-                        <option >California</option>
-                        <option >Delaware</option>
-                        <option >Tennessee</option>
-                        <option >Texas</option>
-                        <option >Washington</option>
+                    <select class="select2 select2-hidden-accessible" name="tag_ids[]" multiple="" data-placeholder="Выберите тэги" style="width: 100%;" data-select2-id="7" tabindex="-1" aria-hidden="true">
+                        @foreach($tags as $tag)
+                            <option {{is_array(old("tag_ids")) && in_array($tag->id, old("tag_ids")) ? "selected" : ""}} value="{{$tag->id}}">{{$tag->title}}</option>
+                        @endforeach
                     </select>
+                            @error("tag_ids")
+                            <div class="text-danger">{{$message}}</div>
+                    @enderror
 
                 </div>
 
