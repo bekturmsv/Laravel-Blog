@@ -17,15 +17,21 @@ Route::group(["namespace"=> "App\Http\Controllers\Main"], function(){
 });
 
 Route::group(["namespace" => "App\Http\Controllers\Personal", "prefix" => "personal","middleware"=>["auth","verified"]],function(){
+
     Route::group(["namespace"=> "Main"], function(){
         Route::get("/","IndexController")->name("personal.main.index");
     });
+
     Route::group(["namespace"=> "Liked", "prefix"=>"liked"], function(){
         Route::get("/","IndexController")->name("personal.liked.index");
         Route::get("/{post}","DeleteController")->name("personal.liked.delete");
     });
-    Route::group(["namespace"=> "Comment"], function(){
-        Route::get("/comment","IndexController")->name("personal.comment.index");
+
+    Route::group(["namespace"=> "Comment", "prefix"=>"comment"], function(){
+        Route::get("/","IndexController")->name("personal.comment.index");
+        Route::patch("/{comment}/","UpdateController")->name("personal.comment.update");
+        Route::get("/{comment}/edit","EditController")->name("personal.comment.edit");
+        Route::delete("/{comment}","DeleteController")->name("personal.comment.delete");
     });
 });
 

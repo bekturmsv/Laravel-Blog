@@ -61,7 +61,13 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->notify(new SendVerifyWithQueueNotification());
     }
 
-    public function likedPosts(){
+    public function likedPosts(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
         return $this->belongsToMany(Post::class,"post_user_likes","user_id","post_id");
+    }
+
+    public function comments(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Comment::class, "user_id",);
     }
 }
