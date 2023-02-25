@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::group(["namespace"=> "App\Http\Controllers\Main"], function(){
-    Route::get("/","IndexController");
+    Route::get("/","IndexController")->name("main.index");
 });
 
 Route::group(["namespace" => "App\Http\Controllers\Personal", "prefix" => "personal","middleware"=>["auth","verified"]],function(){
