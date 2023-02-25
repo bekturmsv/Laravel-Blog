@@ -27,7 +27,15 @@
                   </p>
               </a>
           </li>
+          <li class="nav-item">
+              <a href="{{ route('main.index')}}" class="nav-link">
+                  <i class="nav-icon far fa"></i>
 
+                  <p>
+                      Вернуться
+                  </p>
+              </a>
+          </li>
 
       </ul>
     </div>

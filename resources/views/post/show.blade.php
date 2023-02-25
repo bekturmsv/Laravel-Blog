@@ -30,23 +30,41 @@
 
                         </div>
                     </section>
+                    <section class="comment-list mb-5">
+                        <h2 class="section-title mb-5" data-aos="fade-up">Комментарии ({{$post->comments->count()}})</h2>
+                        @foreach($post->comments as $comment)
+                        <div class="comment-text mb-3">
+                    <span class="username">
+                       <div>
+                           {{$comment->user->name}}
+
+                        </div>
+                      <span class="text-muted float-right">{{$comment->dateAsCarbon->diffForHumans()}}</span>
+                    </span><!-- /.username -->
+                           {{$comment->message}}
+                        </div>
+                        @endforeach
+                    </section>
+                    @auth()
                     <section class="comment-section">
                         <h2 class="section-title mb-5" data-aos="fade-up">Оставить комментарий</h2>
-                        <form action="/" method="post">
+                        <form action="{{route("post.comment.store",$post->id)}}" method="post">
+                            @csrf
                             <div class="row">
                                 <div class="form-group col-12" data-aos="fade-up">
-                                    <label for="comment" class="sr-only">Comment</label>
-                                    <textarea name="message" id="comment" class="form-control" placeholder="Напишите комментарий!" rows="10">Comment</textarea>
+                                    <label for="comment" class="sr-only">Комментарий</label>
+                                    <textarea name="message" id="comment" class="form-control" placeholder="Напишите комментарий!" rows="10"></textarea>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-12" data-aos="fade-up">
-                                    <input type="submit" value="Send Message" class="btn btn-warning">
+                                    <input type="submit" value="Добавить комментарий" class="btn btn-warning">
                                 </div>
                             </div>
                         </form>
                     </section>
+                    @endauth
                 </div>
             </div>
         </div>
