@@ -20,17 +20,21 @@
 
                 </div>
                 <div class="row">
-                    <div class=" mx-auto mb-3" style="margin-top: -50px">
+                    <div class=" mx-auto mb-3" style="margin-top: -50px; ">
                         {{$posts->links()}}
                     </div>
                 </div>
 
+
             </section>
+
             <div class="row">
                 <div class="col-md-8">
                     <section>
+
                         <div class="row blog-post-row">
-                            @foreach($randomPosts as $post)
+
+                        @foreach($randomPosts as $post)
                             <div class="col-md-6 blog-post" data-aos="fade-up">
                                 <div class="blog-post-thumbnail-wrapper">
                                     <img src=" {{"storage/" . $post->preview_image}} " alt="blog post">

@@ -5,6 +5,7 @@
             <h1 class="edica-page-title" data-aos="fade-up">Блог</h1>
             <section class="featured-posts-section">
                 <div class="row">
+                    @if(!($posts->count()==0))
                     @foreach($posts as $post)
                     <div class="col-md-4 fetured-post blog-post" data-aos="fade-up">
                         <a href="{{route("post.show", $post->id)}}" class="blog-post-permalink">
@@ -44,6 +45,9 @@
                     </div>
 
                     @endforeach
+                    @else
+                    <h1>Постов нету</h1>
+                        @endif
 
                 </div>
                 <div class="row">

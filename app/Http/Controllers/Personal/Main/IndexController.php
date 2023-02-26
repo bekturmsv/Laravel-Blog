@@ -11,7 +11,9 @@ class IndexController extends Controller
 {
      function __invoke()
     {
+        $commentsCount = auth()->user()->comments->count();
+        $postsCount = auth()->user()->likedPosts->count();
 
-        return view("personal.main.index");
+        return view("personal.main.index",compact("commentsCount", "postsCount"));
     }
 }

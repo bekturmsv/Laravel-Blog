@@ -11,7 +11,8 @@ class IndexController extends Controller
      function __invoke()
     {
         $categories = Category::all();
-        return view("category.index",compact("categories"));
+        $categoriesCount = Category::all()->count();
+        return view("category.index",compact("categories", "categoriesCount"));
 
     }
 }

@@ -65,8 +65,10 @@
                   </div>
                   <div class="form-group w-60 d-block p-3">
                       <h3 for="">Категория</h3> <br>
+
+
                       @foreach($categories as $category)
-                          @if($category->id == $post -> category_id )
+                          @if($category->id == $post->category_id )
                       <input type="text" value="{{$category->title}}" disabled >
                           @endif
                       @endforeach

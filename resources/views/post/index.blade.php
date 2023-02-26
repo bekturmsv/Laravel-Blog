@@ -2,9 +2,10 @@
 @section("content")
 <main class="blog">
         <div class="container">
-            <h1 class="edica-page-title" data-aos="fade-up">Блог</h1>
+            <h1 class="edica-page-title" data-aos="fade-up">{{}}</h1>
             <section class="featured-posts-section">
                 <div class="row">
+
                     @foreach($posts as $post)
                     <div class="col-md-4 fetured-post blog-post" data-aos="fade-up">
                         <a href="{{route("post.show", $post->id)}}" class="blog-post-permalink">
@@ -45,9 +46,11 @@
 
                     @endforeach
 
+
+
                 </div>
                 <div class="row">
-                    <div class=" mx-auto mb-3" style="margin-top: -50px">
+                    <div class=" mx-auto mb-3 " style="margin-top: -50px">
                         {{$posts->links()}}
                     </div>
                 </div>
